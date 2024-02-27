@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1140.0" style="-fx-background-color: #E4F9F5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cw1601_java.HelloController">
+   <children>
+      <StackPane layoutX="260.0" layoutY="110.0" prefHeight="790.0" prefWidth="880.0">
+         <children>
+            <Pane fx:id="panevst" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <TableView fx:id="vstTable" layoutY="123.0" prefHeight="570.0" prefWidth="880.0">
+                     <columns>
+                        <TableColumn fx:id="vstName" prefWidth="250.0" text="Name" />
+                        <TableColumn fx:id="vstAge" prefWidth="79.0" text="Age" />
+                        <TableColumn fx:id="vstTeam" prefWidth="238.0" text="Team" />
+                        <TableColumn fx:id="vstCar" prefWidth="223.0" text="Car" />
+                        <TableColumn fx:id="vstCP" prefWidth="89.0" text="Current Points" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="label1111" layoutX="206.0" layoutY="22.0" prefHeight="17.0" prefWidth="467.0" />
+                  <Button fx:id="btnvstDetail" layoutX="722.0" layoutY="714.0" mnemonicParsing="false" onAction="#Sort" prefHeight="35.0" prefWidth="129.0" styleClass="button1" stylesheets="@style.css" text="Sort By Points" />
+                  <Label fx:id="labelSort" layoutX="212.0" layoutY="49.0" prefHeight="25.0" prefWidth="344.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneadd" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <Label layoutX="66.0" layoutY="60.0" text="Name" textFill="#282525" />
+                  <Label layoutX="66.0" layoutY="97.0" text="Age" />
+                  <Label layoutX="66.0" layoutY="135.0" text="Team" />
+                  <Label layoutX="72.0" layoutY="174.0" text="Car" />
+                  <Label layoutX="60.0" layoutY="212.0" text="Current Points" />
+                  <TextField fx:id="textName" layoutX="181.0" layoutY="56.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="textAge" layoutX="181.0" layoutY="93.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="textTeam" layoutX="181.0" layoutY="131.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="TextCar" layoutX="181.0" layoutY="170.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="TextCP" layoutX="181.0" layoutY="208.0" style="-fx-background-color: #bfc9c7;" />
+                  <Button fx:id="btnaddDetail" layoutX="519.0" layoutY="191.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="35.0" prefWidth="129.0" styleClass="button1" stylesheets="@style.css" text="Add" />
+                  <TableView fx:id="driverTable" layoutX="-1.0" layoutY="256.0" prefHeight="532.0" prefWidth="880.0">
+                    <columns>
+                      <TableColumn fx:id="driverName" prefWidth="250.0" text="Name" />
+                      <TableColumn fx:id="driverAge" prefWidth="79.0" text="Age" />
+                        <TableColumn fx:id="driverTeam" prefWidth="238.0" text="Team" />
+                        <TableColumn fx:id="driverCar" prefWidth="223.0" text="Car" />
+                        <TableColumn fx:id="driverCP" prefWidth="89.0" text="Current Points" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="label11" layoutX="206.0" layoutY="22.0" prefHeight="17.0" prefWidth="467.0" />
+                  <Button fx:id="Backadd" layoutY="15.0" mnemonicParsing="false" onAction="#mouseClick3" prefHeight="17.0" prefWidth="32.0" style="-fx-background-color: transparent;" textFill="#f2eded">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@left-arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panedelete" layoutX="10.0" layoutY="10.0" prefHeight="772.0" prefWidth="880.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <TableView fx:id="deleteTable" layoutY="84.0" prefHeight="609.0" prefWidth="880.0">
+                     <columns>
+                        <TableColumn fx:id="deleteName" prefWidth="250.0" text="Name" />
+                        <TableColumn fx:id="deleteAge" prefWidth="79.0" text="Age" />
+                        <TableColumn fx:id="deleteTeam" prefWidth="238.0" text="Team" />
+                        <TableColumn fx:id="deleteCar" prefWidth="223.0" text="Car" />
+                        <TableColumn fx:id="deleteCP" prefWidth="89.0" text="Current Points" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="label111" layoutX="206.0" layoutY="22.0" prefHeight="17.0" prefWidth="467.0" />
+                  <Button fx:id="btndeleteDetail" layoutX="722.0" layoutY="714.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="35.0" prefWidth="129.0" styleClass="button1" stylesheets="@style.css" text="Delete" />
+                  <Button fx:id="Backdelete" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#mouseClick3" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@left-arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="paneupdate" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <Label layoutX="66.0" layoutY="60.0" text="Name" />
+                  <Label layoutX="66.0" layoutY="97.0" text="Age" />
+                  <Label layoutX="66.0" layoutY="135.0" text="Team" />
+                  <Label layoutX="72.0" layoutY="174.0" text="Car" />
+                  <Label layoutX="71.0" layoutY="203.0" text="Current Points" />
+                  <TextField fx:id="textupdateName" layoutX="181.0" layoutY="56.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="textupdateAge" layoutX="181.0" layoutY="93.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="textupdateTeam" layoutX="181.0" layoutY="131.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="TextupdateCar" layoutX="181.0" layoutY="170.0" style="-fx-background-color: #bfc9c7;" />
+                  <TextField fx:id="TextupdateCP" layoutX="181.0" layoutY="208.0" style="-fx-background-color: #bfc9c7;" />
+                  <TableView fx:id="updateTable" layoutX="-1.0" layoutY="256.0" onMouseClicked="#updateFields" prefHeight="532.0" prefWidth="880.0">
+                     <columns>
+                        <TableColumn fx:id="updateName" prefWidth="250.0" text="Name" />
+                        <TableColumn fx:id="updsteAge" prefWidth="79.0" text="Age" />
+                        <TableColumn fx:id="updateTeam" prefWidth="238.0" text="Team" />
+                        <TableColumn fx:id="updateCar" prefWidth="223.0" text="Car" />
+                        <TableColumn fx:id="updateCP" prefWidth="89.0" text="Current Points" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="btnupdateDetails" layoutX="388.0" layoutY="162.0" mnemonicParsing="false" onAction="#updateDetails" prefHeight="46.0" prefWidth="115.0" styleClass="button1" stylesheets="@style.css" text="Update" />
+                  <Label fx:id="label1" layoutX="219.0" layoutY="23.0" prefHeight="17.0" prefWidth="467.0" />
+                  <Button fx:id="Backupdate" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#mouseClick3" prefHeight="35.0" prefWidth="32.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@left-arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panedm" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <Button fx:id="btnupdate" layoutX="454.0" layoutY="241.0" mnemonicParsing="false" onAction="#mouseClick2" prefHeight="173.0" prefWidth="284.0" style="-fx-background-color: #11999E;" styleClass="button1" stylesheets="@style.css" text="UPDATE">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnadd" layoutX="122.0" layoutY="236.0" mnemonicParsing="false" onAction="#mouseClick2" prefHeight="182.0" prefWidth="264.0" style="-fx-background-color: #11999E;" styleClass="button1" stylesheets="@style.css" text="ADD" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btndelete" layoutX="285.0" layoutY="512.0" mnemonicParsing="false" onAction="#mouseClick2" prefHeight="182.0" prefWidth="284.0" style="-fx-background-color: #11999E;" styleClass="button1" stylesheets="@style.css" text="DELETE">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="-3.0" layoutY="79.0" prefHeight="107.0" prefWidth="886.0" style="-fx-background-color: #11999E;" text="Driver Management" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="36.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="panefm" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <Button fx:id="btnsave" layoutX="162.0" layoutY="341.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="160.0" prefWidth="210.0" styleClass="button1" stylesheets="@style.css" text="SAVE FILE" textFill="WHITE">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnload" layoutX="470.0" layoutY="341.0" mnemonicParsing="false" onAction="#loadFromFile" prefHeight="160.0" prefWidth="210.0" styleClass="button1" stylesheets="@style.css" text="LOAD FILE">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="24.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="labelFM" contentDisplay="CENTER" layoutX="305.0" layoutY="242.0" prefHeight="25.0" prefWidth="270.0" />
+                  <Pane layoutX="-2.0" layoutY="86.0" prefHeight="99.0" prefWidth="886.0" style="-fx-background-color: #11999E;">
+                     <children>
+                        <Label layoutX="29.0" layoutY="24.0" prefHeight="55.0" prefWidth="278.0" text="File Management" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans MT Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="panevrl" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <Button layoutX="366.0" layoutY="88.0" mnemonicParsing="false" onAction="#vrl" prefHeight="55.0" prefWidth="149.0" styleClass="button1" stylesheets="@style.css" text="Sort By Date" />
+                  <Label fx:id="srrlbl1" layoutX="206.0" layoutY="14.0" prefHeight="17.0" prefWidth="543.0" />
+                  <TableView fx:id="srrTable1" layoutX="16.0" layoutY="167.0" prefHeight="609.0" prefWidth="845.0">
+                     <columns>
+                        <TableColumn fx:id="srrName1" prefWidth="247.0" text="Name" />
+                        <TableColumn fx:id="srrPosition1" prefWidth="122.0" text="Position" />
+                        <TableColumn fx:id="srrCP1" prefWidth="140.0" text="Current Points" />
+                        <TableColumn fx:id="srrLocation1" prefWidth="184.0" text="Location" />
+                        <TableColumn fx:id="srrDate1" prefWidth="162.0" text="Date" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="panesrr" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <DatePicker fx:id="date_picker" layoutX="170.0" layoutY="103.0" prefHeight="35.0" prefWidth="203.0" />
+                  <TableView fx:id="srrTable" layoutX="14.0" layoutY="169.0" prefHeight="609.0" prefWidth="856.0">
+                    <columns>
+                      <TableColumn fx:id="srrName" prefWidth="247.0" text="Name" />
+                      <TableColumn fx:id="srrPosition" prefWidth="122.0" text="Position" />
+                        <TableColumn fx:id="srrCP" prefWidth="140.0" text="Current Points" />
+                        <TableColumn fx:id="srrLocation" prefWidth="184.0" text="Location" />
+                        <TableColumn fx:id="srrDate" prefWidth="162.0" text="Date" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="504.0" layoutY="103.0" mnemonicParsing="false" onAction="#srr" prefHeight="35.0" prefWidth="76.0" styleClass="button1" stylesheets="@style.css" text="Simulate" />
+                  <Label layoutX="71.0" layoutY="103.0" prefHeight="25.0" prefWidth="83.0" text="Date : ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="srrlbl" layoutX="206.0" layoutY="14.0" prefHeight="17.0" prefWidth="543.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="panemanu" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E4F9F5;">
+               <children>
+                  <ImageView fitHeight="182.0" fitWidth="248.0" layoutX="332.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wrc-high-resolution-logo-black-on-transparent-background.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="107.0" layoutY="284.0" prefHeight="99.0" prefWidth="690.0" text="WORLD RALLY CROSS CHAMPIONSHIP">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="383.0" prefHeight="35.0" prefWidth="598.0" text="Welcome to the World Rally Cross Championship management system.">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="135.0" layoutY="418.0" prefHeight="35.0" prefWidth="598.0" text="This application provides a comprehensive solution for managing all">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="453.0" prefHeight="35.0" prefWidth="598.0" text="aspects of the championship, from race scheduling to team and driver">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="494.0" prefHeight="35.0" prefWidth="598.0" text="management. With a user-friendly interface and powerful features, this">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="529.0" prefHeight="35.0" prefWidth="598.0" text="system is designed to help you make the most of your championship">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="141.0" layoutY="564.0" prefHeight="35.0" prefWidth="598.0" text="                                            experience.">
+                     <font>
+                        <Font name="Gill Sans MT Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox layoutY="105.0" prefHeight="796.0" prefWidth="258.0" spacing="20.0" style="-fx-background-color: #30E3CA; -fx-background-radius: 0  60 0 0;">
+         <children>
+            <AnchorPane prefHeight="800.0" prefWidth="258.0">
+               <children>
+                  <Button fx:id="btn1" alignment="BASELINE_LEFT" layoutX="26.0" layoutY="138.0" mnemonicParsing="false" onAction="#mouseClicks" prefHeight="35.0" prefWidth="192.0" styleClass="button1" stylesheets="@style.css" text="Driver Configuration">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@analytics.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn2" alignment="BASELINE_LEFT" layoutX="26.0" layoutY="212.0" mnemonicParsing="false" onAction="#mouseClicks" prefHeight="35.0" prefWidth="192.0" styleClass="button1" stylesheets="@style.css" text="View Standing Table">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@view.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn3" alignment="BASELINE_LEFT" layoutX="26.0" layoutY="283.0" mnemonicParsing="false" onAction="#mouseClicks" prefHeight="35.0" prefWidth="192.0" styleClass="button1" stylesheets="@style.css" text="Stimulating Random Race">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@shuffle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn5" alignment="BASELINE_LEFT" layoutX="26.0" layoutY="434.0" mnemonicParsing="false" onAction="#mouseClicks" prefHeight="35.0" prefWidth="192.0" styleClass="button1" stylesheets="@style.css" text="File Management">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@folder.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn6" alignment="BASELINE_LEFT" layoutX="26.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#exit1" prefHeight="35.0" prefWidth="192.0" styleClass="button1" stylesheets="@style.css" text="Exit">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn4" alignment="BASELINE_LEFT" layoutX="26.0" layoutY="357.0" mnemonicParsing="false" onAction="#mouseClicks" prefHeight="35.0" prefWidth="192.0" styleClass="button1" stylesheets="@style.css" text="Sort By Date">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sort.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Gill Sans MT" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane layoutX="-4.0" layoutY="-6.0" prefHeight="117.0" prefWidth="1146.0" style="-fx-background-color: #11999E;">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="135.0" layoutY="17.0" prefHeight="74.0" prefWidth="880.0" text="World Rally Cross Championship" textFill="#fcfcfc">
+               <font>
+                  <Font name="Gill Sans MT Bold Italic" size="48.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="84.0" fitWidth="129.0" layoutX="88.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@wrc-high-resolution-logo-white-on-transparent-background.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

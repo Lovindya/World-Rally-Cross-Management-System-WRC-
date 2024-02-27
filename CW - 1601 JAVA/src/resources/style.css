@@ -1,0 +1,26 @@
+.text-input{
+    -fx-background-radius :20;
+    -fx-text-fill :#fff;
+    -fx-prompt-text-fill :#D4CEE3;
+}
+
+.button1{
+    -fx-background-color :#11999E;
+    -fx-text-fill :#fff;
+    -fx-background-radius :20;
+}
+
+.button1:hover{
+    -fx-text-fill :#B68FE5;
+    -fx-background-radius :20;
+}
+
+.button1:pressed{
+    -fx-text-fill :#80AFF5;
+    -fx-background-radius :20;
+}
+
+.button1:active{
+    -fx-text-fill :#80AFF5;
+    -fx-background-radius :20;
+}
